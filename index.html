@@ -1,0 +1,332 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+
+<head>
+	<title>Cocktailphabet</title>
+	<meta name="keywords" content="cocktail,brooklyn,bar,mixology,cheers">
+	<meta name="author" content="Kandice Levero">
+	<meta name="description" content="Search cocktails A-Z and explore the best of Brooklyn’s cocktail scene">
+    <meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="initial-scale=1">
+
+   
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="css/header.min.css">
+	<link rel="stylesheet" type="text/css" href="css/about.min.css">
+	<link rel="stylesheet" type="text/css" href="css/cocktail.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.min.css">
+
+	<link rel="stylesheet" type="text/css" href="ActaPoster/MyFontsWebfontsKit.css">
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700,200' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,700' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<!--Google Analytics-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-42613972-4', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+</head>
+
+<body>
+
+	<div class="wrapper" ng-controller="cocktailaphabet">
+		
+		<div class="sticky_header">
+			<div class="sticky_logo_container">
+				<h2 class="logo stickylogo">Cocktailphabet</h2>
+			</div>
+			<div class="sticky_letter_container">
+				<div ng-repeat="cocktail in cocktails" class="letter sticky_letter_box {{cocktail.internal_link}} sticky_letter_box{{cocktail.letter}}">
+					<div data-id="{{cocktail.letter}}" data-availability="{{cocktail.internal_link}}" onclick="_letterclicked(this);">{{cocktail.letter}}</div>
+				</div>
+			</div>
+		</div>
+		<!--CONTACT-->   <!--CONTACT-->   <!--CONTACT-->
+
+		<div class="contact_body">
+			<p class="drink_us">Know of a great Brooklyn cocktail bar we should feature, or just want to buy us a drink?</p>
+			<p class="hear_you">We would love to hear from you!</p>
+			<p class="email">email:</p>
+			<p class="our_email"><a href="mailto:info@cocktailphabet.com">info@cocktailphabet.com</a></p>
+			<div class="mail_button">
+				<img src="images/red_x.png">
+			</div>
+		</div>
+
+	<!--HEADER-->   <!--HEADER-->   <!--HEADER-->
+
+		<!--
+			HEADER
+		-->	
+		<div class="section_1">
+			<header class="header">
+				<div class="x_button"><img src="images/x_button.png"></div>
+				<h1 class="logo mainlogo">Cocktailphabet</h1>
+				<div class="blue_line"></div>
+				<nav>
+					<ol class="nav_ol">
+						<li style="text-align:left; max-width: 1000px; margin:0px auto; padding:0px 40px;"><img class="us" src="images/us.png"></li>
+						<li class="nav_li about"><a href="about.html">ABOUT</a></li>
+						<li class="nav_li">MAP</li>
+						<li class="nav_li contact">CONTACT</li>
+					</ol>
+				</nav>
+			</header>
+		</div>
+		<!--
+			HEADER
+		-->	
+
+	<!--INTRO BLOCK-->   
+
+			<div class="intro_block">
+				<div class="white_block clear">
+					<div class="parenthesis_1">{</div>
+					<p class="intro_par">Search cocktails A-Z and explore the best of <span>Brooklyn’s</span> cocktail scene</p>
+					<div class="parenthesis_2">}</div>				
+					<div class="clear"></div>			
+				</div>
+
+
+
+	<!--BUBS-->   <!--BUBS-->
+
+				<div class="bub_parent">
+					<div class="bub bub_1">
+						<div class="search_text">search by</div>
+						<div class="search_line"></div>
+						<div class="s_category">letter</div>
+
+					</div>
+
+					<div class="bub bub_2">
+						<div class="search_text">search by</div>
+						<div class="search_line"></div>
+						<div class="s_category">hood</div>
+					</div>
+
+					<div class="bub bub_3">
+						<div class="search_text">search by</div>
+						<div class="search_line"></div>	
+						<div class="s_category">spirit</div>			
+					</div>			
+				</div>
+				<img src="images/top_button.png"class="top_pg_button deactivate"/>
+			</div>
+
+		
+
+	<!--ALPHABET GRID-->   <!--ALPHABET GRID-->
+
+			<div class="alphabet_grid">
+
+							<!-- Triangle -->
+				<div class="alphabet_triangle_1"></div>
+				<div class="alphabet_triangle_2"></div>
+
+				<div class="alphabet_parent_container">
+				<div class="alphabet_parent">
+
+				<!--NOT YET-->
+					<div class="not_yet">
+						<p class="have_not">We haven’t added this letter yet</p>
+						<div class="not_yet_divider"></div>
+						<p class="help_letter">You can help us by recommending your favorite Brooklyn cocktail bar so we can complete the alphabet!</p>
+						<p class="email_2">email:</p>
+						<p class="our_email_2"> <a href="mailto:info@cocktailphabet.com">info@cocktailphabet.com</a></p>
+						<div class="not_yet_button">
+							<img src="images/blue_x.png">
+						</div>
+					</div>
+				<!--NOT YET END-->
+
+					<div class="row_parent row_1">
+
+						<div class="letter letter_box yellow_hover no_letter {{cocktail.thumbnail_odd}}" data-id="{{cocktail.letter}}" ng-repeat="cocktail in cocktails"   data-availability="{{cocktail.internal_link}}" onclick="_letterclicked(this);">
+							<div class="bg {{cocktail.thumbnail_class}}"></div>
+							<span>{{cocktail.letter}}</span>
+						</div>
+
+					</div>
+				</div>
+				</div>
+
+			</div>
+			<h2 class="cheers">cheers!</h2>
+
+
+
+
+
+		<!-- 
+			COCKTAIL BODY
+			COCKTAIL BODY
+			COCKTAIL BODY
+
+			START
+		-->
+		
+		<div class="cocktaillist">
+			<div class="cocktailbody {{cocktail.internal_link}}" id="cocktailbody-{{cocktail.letter}}" ng-repeat="cocktail in cocktails">
+				
+				<div class="triangle1" style="border-left-color:{{cocktail.style.triangle1}}"></div>
+				<div class="triangle2" style="border-bottom-color:{{cocktail.style.triangle2}}"></div>
+
+				<div class="cocktailcontent">
+					<!--
+						Bar Hero Photo
+					-->
+					<div class="g_block_img">
+						<img src="{{cocktail.bar.image}}"/>
+					</div>
+					<!--
+						Cocktail Letter
+					-->
+					<div class="clear cocktail_intro_parent">
+						<div class="drink_letter">
+							
+							<img src="{{cocktail.letter_image}}" />
+							<span class="stands_for">stands for</span>
+							<span class="cocktail_title">
+								{{cocktail.cocktail.name}}
+							</span>
+						</div>
+					</div>
+
+					<div class="cocktail_body">
+						<!--
+							START:Receipe
+						-->
+						<div class="recipe_parent {{cocktail.style.cocktail_position}}">
+							<p class="about_cocktail mainbody">{{cocktail.cocktail.description}}</p>
+							<!--
+								Cocktail Receipe
+							-->
+							<div>
+								<div ng-repeat="receipes in cocktail.cocktail.receipes">
+									<h3 class="you_need">{{receipes.title}}</h3>
+									<ul class="ingredients_list">
+										<li class="ingredient" ng-repeat="content in receipes.ingredients">{{content}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--
+							END:Receipe
+						-->
+						<div class="cocktail_silo">
+							<img src="{{cocktail.cocktail.silo}}" class="slideFromTo {{cocktail.style.cocktail_position}}" />
+						</div>
+						<div class="clear"></div>
+						<div>
+							<p class="how_to mainbody">{{cocktail.cocktail.howto}}</p>
+						</div>
+						<!--
+							START:Bar 
+						-->
+						<div class="bar_parent">
+							<div class="bar_bub">
+								<a href="{{cocktail.bar.website}}"><img src="{{cocktail.bar.bulb_image}}"></a>
+							</div>
+							<div class="vertical_divider_2"></div>
+							<div class="bar_info">
+								<h5 class="by">brought to you by:</h5>
+								<h4 class="bar_name">{{cocktail.bar.name}}</h4>
+								<dir class="horizontal_divider"></dir>
+								<ul class="bar_address">
+									<li>{{cocktail.bar.address1}}</li>
+									<li>{{cocktail.bar.address2}}</li>
+									<li>{{cocktail.bar.phone}}</li>
+								</ul>
+							</div>
+						</div>
+						<!--
+							END:Bar
+						-->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--
+			END
+
+			COCKTAIL BODY
+			COCKTAIL BODY
+			COCKTAIL BODY
+		-->
+
+	<!--FOOTER-->     <!--FOOTER-->
+
+		<footer>
+			<div class="social_media_block"></div>
+			<div class="copyright">© 2016   Cocktailphabet.   Made in Brooklyn, obvi.</div>
+		</footer>
+
+	<!--TOP BUTTON-->     <!--TOP BUTTON-->
+
+	</div>
+	
+	<script src="js/index.min.js"></script>
+	<script src="js/about.min.js"></script>
+	<script src="js/general.min.js"></script>
+	<script>
+		var pageID = 0;
+		/*
+			check whether last page is about or not
+		*/
+		$storage = window.localStorage;
+		try {
+		    var lastPageIsAbout = JSON.parse($storage.getItem('about'));
+		} catch (e){
+		    var lastPageIsAbout = false;
+		}
+		if(lastPageIsAbout === true){
+			toggleAbout();
+		}
+	</script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+	<script src="js/controller.min.js"></script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
